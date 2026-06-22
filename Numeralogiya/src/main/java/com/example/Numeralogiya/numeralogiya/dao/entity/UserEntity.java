@@ -8,6 +8,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
@@ -16,12 +18,9 @@ public class UserEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-    String name;
-    String lastName;
-    String password;
-    String dob;
-
-
-
+    private Long id;
+    private String name;
+    private String lastName;
+    private String password;
+    private LocalDateTime dateOfBirth;
 }
